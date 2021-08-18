@@ -1,0 +1,14 @@
+[Unit]
+Description=Minecraft Bedrock Dedicated Server
+After=network-online.target
+
+[Service]
+User=js
+Type=forking
+GuessMainPID=no
+WorkingDirectory=/home/js
+ExecStart=/home/js/startMCBE.sh
+ExecStop=/home/js/quitMCBE.sh
+
+[Install]
+WantedBy=multi-user.target
